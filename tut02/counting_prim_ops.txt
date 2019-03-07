@@ -1,0 +1,11 @@
+for (int i = n; i >= 1; i--)
+
+for all i = n down to 1 do -- 2n + 1 | n
+    for all j = n down to i do 0 + 3 + 5 + .. + (2n + 1) = n(n+2) | n^2
+        print A[i]A[j] n^2
+    end for
+end for
+
+2n + 1 + n(n+2) + n^2 = 2n + 1 + n^2 + 2n + n^2
+= 2n^2 //+ 4n + 1
+O(n^2)

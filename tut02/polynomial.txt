@@ -1,0 +1,16 @@
+// polynomial of form a_n x^n + a_(n-1)xx^2 + ... + a_1x + a_0
+
+// eval for some x
+
+sum = 0 -- O(1)
+x^n = 1 -- O(1)
+for i = 0 to n -- O(n)
+    x^n *= x -- O(n)
+    sum += a_i * x^n -- O(n)
+
+
+sum = 0
+for i = n to 0
+    sum *= x
+    sum += a_i
+
