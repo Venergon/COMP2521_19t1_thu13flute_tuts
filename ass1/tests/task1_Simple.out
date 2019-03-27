@@ -1,0 +1,44 @@
+
+=================================================================
+==28724==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 440 byte(s) in 11 object(s) allocated from:
+    #0 0x4c6173 in malloc (/tmp_amd/ravel/export/ravel/2/z5116848/19t1/2521/ass1/task1+0x4c6173)
+    #1 0x4f62a2 in newMailMessage /import/ravel/2/z5116848/19t1/2521/ass1/MailMessage.c:30:24
+    #2 0x4f69a1 in getMailMessage /import/ravel/2/z5116848/19t1/2521/ass1/MailMessage.c:65:20
+    #3 0x4f54fb in main /import/ravel/2/z5116848/19t1/2521/ass1/task1.c:26:16
+    #4 0x7ff322cea09a in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2409a)
+
+Indirect leak of 605 byte(s) in 11 object(s) allocated from:
+    #0 0x4b0ded in __interceptor_strdup (/tmp_amd/ravel/export/ravel/2/z5116848/19t1/2521/ass1/task1+0x4b0ded)
+    #1 0x4f6c48 in getMailMessage /import/ravel/2/z5116848/19t1/2521/ass1/MailMessage.c:75:14
+    #2 0x4f54fb in main /import/ravel/2/z5116848/19t1/2521/ass1/task1.c:26:16
+    #3 0x7ff322cea09a in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2409a)
+
+Indirect leak of 440 byte(s) in 8 object(s) allocated from:
+    #0 0x4b0ded in __interceptor_strdup (/tmp_amd/ravel/export/ravel/2/z5116848/19t1/2521/ass1/task1+0x4b0ded)
+    #1 0x4f73ef in getMailMessage /import/ravel/2/z5116848/19t1/2521/ass1/MailMessage.c:83:19
+    #2 0x4f54fb in main /import/ravel/2/z5116848/19t1/2521/ass1/task1.c:26:16
+    #3 0x7ff322cea09a in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2409a)
+
+Indirect leak of 396 byte(s) in 11 object(s) allocated from:
+    #0 0x4b0ded in __interceptor_strdup (/tmp_amd/ravel/export/ravel/2/z5116848/19t1/2521/ass1/task1+0x4b0ded)
+    #1 0x4f7040 in getMailMessage /import/ravel/2/z5116848/19t1/2521/ass1/MailMessage.c:79:16
+    #2 0x4f54fb in main /import/ravel/2/z5116848/19t1/2521/ass1/task1.c:26:16
+    #3 0x7ff322cea09a in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2409a)
+
+Indirect leak of 285 byte(s) in 11 object(s) allocated from:
+    #0 0x4b0ded in __interceptor_strdup (/tmp_amd/ravel/export/ravel/2/z5116848/19t1/2521/ass1/task1+0x4b0ded)
+    #1 0x4f6e3c in getMailMessage /import/ravel/2/z5116848/19t1/2521/ass1/MailMessage.c:77:19
+    #2 0x4f54fb in main /import/ravel/2/z5116848/19t1/2521/ass1/task1.c:26:16
+    #3 0x7ff322cea09a in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2409a)
+
+Indirect leak of 88 byte(s) in 11 object(s) allocated from:
+    #0 0x4c6173 in malloc (/tmp_amd/ravel/export/ravel/2/z5116848/19t1/2521/ass1/task1+0x4c6173)
+    #1 0x4f56b0 in newDateTime /import/ravel/2/z5116848/19t1/2521/ass1/DateTime.c:30:21
+    #2 0x4f5ad2 in scanDateTime /import/ravel/2/z5116848/19t1/2521/ass1/DateTime.c:71:17
+    #3 0x4f7221 in getMailMessage /import/ravel/2/z5116848/19t1/2521/ass1/MailMessage.c:81:16
+    #4 0x4f54fb in main /import/ravel/2/z5116848/19t1/2521/ass1/task1.c:26:16
+    #5 0x7ff322cea09a in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2409a)
+
+SUMMARY: AddressSanitizer: 2254 byte(s) leaked in 63 allocation(s).
